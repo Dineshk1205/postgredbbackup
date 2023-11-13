@@ -1,0 +1,14 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: postgre-pv
+  namespace: postgres
+  labels:
+    app: postgres
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: vspheretanzu
+  resources:
+    requests:
+      storage: 5Gi
